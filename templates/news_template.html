@@ -1,0 +1,14 @@
+<div class="cont">
+    <div class="row">
+        {% for post in posts %}
+            <div class="border item border-light col-md-6">
+                <img class="rows-img" src="{{ post.img_url }}">
+                <a href="{{ post.link }}"><p class="rows">{{ post.article }}</p></a>
+                <form action="{{ url_for('show_post', news_id=post.id) }}">
+                    <button class="dis-cat-btn btn btn-block btn-info btn-lg">Discuss!</button>
+                </form>
+
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% include 'header.html' %}
+<div class="border border-light item">
+    <img class="post-img" src="{{ post.img_url }}">
+    <a href="{{ post.link }}"><h3 class="post-text">{{ post.article }}</h3></a>
+    <p class="post-subtext">{{ body }}</p>
+</div>
+<div class="form-c">
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+                </ul>
+            {% endif %}
+          {% endwith %}
+    {{ wtf.quick_form(form, novalidate=True, button_map={"submit_comment": "primary"}) }}
+
+    <div class="comment">
+              <ul class="commentList">
+                  {% for comment in post.comments %}
+                <li>
+                <div class="commenterImage">
+                    <img src="{{ comment.author.email | gravatar() }}"/>
+
+                </div>
+                    <div class="commentText">
+                      <p>{{ comment.text | safe }}</p>
+                      <span class="date sub-text">{{ comment.author.name }}</span>
+                    </div>
+                    {% if current_user.id == 1 or current_user.id == comment.author.id %}
+                        <hr>
+                        <div class="commentDelete">
+                            <form action="{{ url_for('delete', comment_id=comment.id) }}">
+                                <button class="btn btn-block btn-outline-primary btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    {% endif %}
+                </li>
+                  {% endfor %}
+              </ul>
+
+
+
+          </div>
+
+
+</div>
+
+{{ ckeditor.load(pkg_type="standard") }}
+</body>
+</html>

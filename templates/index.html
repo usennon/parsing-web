@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+
+      <div class="main_stage">
+      <h3>Main now</h3>
+          <ul>
+              {% for key in news %}
+              <li class="news_li">
+                  <a class="news_link" href="{{ news[key][0] }}">{{ news[key][1] }}</a>
+              </li>
+                  <br>
+              {% endfor %}
+          </ul>
+      </div>
+    <div class="trends">
+        <h3>Trends</h3>
+        {% for trend in trends %}
+        <div class="border border-light item">
+            <img class='rounded' src="{{ trend.img_url }}" alt="image">
+            <a class='trends-text' href="{{ trend.link }}">{{ trend.article }}</a>
+            <form action="{{ url_for('show_post', news_id=trend.id) }}">
+                <button class="dis-cat-btn btn btn-block btn-info btn-md">Discuss!</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

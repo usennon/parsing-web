@@ -1,0 +1,244 @@
+body {
+    font-family: 'Montserrat', serif;
+}
+
+.border {
+    background-color: #dddddd;
+    text-align: center;
+}
+
+
+.form-c{
+    color: black;
+}
+
+.rounded {
+    width: 30%;
+}
+
+
+
+h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+    color: #75cfb8;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 14%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aqua;
+}
+
+.cont {
+    position: center;
+    margin: 50px;
+}
+
+.container-fluid {
+  padding: 1% 15% 2%;
+}
+
+.news_link {
+    color: black;
+    text-decoration: none;
+}
+
+.dis-btn {
+    position: relative;
+    right: -100px;
+}
+
+.dis-cat-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.dis-del-btn {
+    position: absolute;
+    right: 150px;
+    bottom: 10px;
+}
+
+.news_li{
+    display: inline-block;
+    padding: 5px 10%;
+}
+
+.main_stage {
+    display: inline-block;
+    margin: 50px 0;
+    width: 50%;
+}
+
+.trends h3 {
+    position: relative;
+    right: 105px;
+}
+
+#title {
+  background-color: #75cfb8;
+}
+
+.trends {
+    float: right;
+    margin: 50px 0;
+    width: 50%;
+}
+
+
+.trends-text {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    width: 60%;
+    padding-left: 10px;
+
+}
+
+
+.nav-item {
+    font-size: 1.15rem;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.rows {
+    color: black;
+    font-size: 1.25rem;
+    padding: 20px 0 50px 0;
+    text-align: center;
+}
+.rows-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.rows:hover {
+    text-decoration: none;
+    color: aqua;
+    display: inline-block;
+}
+
+@media (max-width: 1028px) {
+    #title {
+        text-align: center;
+    }
+}
+
+.dropbtn {
+    background-color: #75cfb8;
+    color: white;
+    padding-top: 5px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 50px;
+    top: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: aqua;}
+
+.item {
+    padding: 20px;
+    position: relative;
+}
+
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+
+
+
+.form-c {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#submit_comment {
+    margin: 10px 0 10px 0;
+}
+
+.post-img {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.post-text {
+    padding: 30px;
+    color: black;
+}
+
+.post-subtext {
+    color: black;
+    width: 60%;
+    margin: 0 auto;
+}
